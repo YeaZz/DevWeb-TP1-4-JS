@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="assets/css/header.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/footer.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.4.1/css/simple-line-icons.css">
+    <script src="assets/js/subscribe.js" defer></script>
+</head>
+<body>
+
+    <header>
+        <nav>
+            <input id="header-toggle" type="checkbox">
+            <label class="header-button" for="header-toggle"></label>
+            <ul>
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="presentation.html">Présentation</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li class="header-blog">
+                    <a href="blog.html">Blog</a>
+                    <ul>
+                        <li><a href="articles/article1.html">Cuisine et là</a></li>
+                        <li><a href="articles/article2.html">Y quéa</a></li>
+                        <li><a href="articles/article3.html">Car fours</a></li>
+                    </ul>
+                </li>
+                <li class="active">Abonnez-vous</li>
+                <li><a href="login.html">Se connecter</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="wrapper">
+            <h1>Abonnez-vous</h1>
+            <form action="index.html" method="post" enctype="multipart/form-data">
+                <div>
+                    <label for="email">Email</label>
+                    <input id="email" type="email" name="email" class="form" required>
+                    <span class="error"></span>
+                </div>
+                <div>
+                    <label for="password">Mot de passe</label>
+                    <input id="password" type="password" name="password" class="form" required>
+                    <span class="error"></span>
+                </div>
+                <div>
+                    <label for="lastname">Nom</label>
+                    <input id="lastname" type="text" name="lastname" class="form" required>
+                    <span class="error"></span>
+                </div>
+                <div>
+                    <label for="firstname">Prénom</label>
+                    <input id="firstname" type="text" name="firstname" class="form" required>
+                    <span class="error"></span>
+                </div>
+                <div>
+                    <label for="birthdate">Date de naissance</label>
+                    <input id="birthdate" type="date" name="birthdate">
+                </div>
+                <div>
+                    <label for="address">Adresse</label>
+                    <input id="address" type="text" name="address" class="form" required>
+                    <span class="error"></span>
+                </div>
+                <div>
+                    <label for="postal">Code postal</label>
+                    <input id="postal" type="text" name="postal" pattern="[0-9]{5}" class="form" required>
+                    <span class="error"></span>
+                </div>
+                <div>
+                    <label for="city">Ville</label>
+                    <input id="city" type="text" name="city" class="form" required>
+                    <span class="error"></span>
+                </div>
+                <div>
+                    <p>Genre</p>
+                    <select name="genre">
+                        <option value="none" selected>Non renseigné</option>
+                        <option value="man">Homme</option>
+                        <option value="woman">Femme</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="picture">Photo</label>
+                    <input id="picture" type="file" name="picture" accept="image/png, image/jpeg">
+                </div>
+                <div>
+                    <label for="color">Couleur préférée</label>
+                    <input id="color" type="color" name="color">
+                </div>
+                <button type="submit">
+                    <p>S'incrire</p>
+                    <i class="icon-arrow-right"></i>
+                </button>
+            </form>
+        </div>
+    </main>
+
+    <footer>
+        <ul>
+            <li class="heading">Nos derniers articles</li>
+            <li><a href="articles/article1.html">Cuisine et là</a></li>
+            <li><a href="articles/article2.html">Y quéa</a></li>
+            <li><a href="articles/article3.html">Car fours</a></li>
+        </ul>
+        <a href="contact.html">Nous contacter</a>
+        <p>© Cavalcante Noa</p>
+        <p>IUTLyon1 Bourg-en-Bresse 2022-2023</p>
+    </footer>
+
+</body>
+</html>

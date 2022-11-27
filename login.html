@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="assets/css/header.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/footer.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.4.1/css/simple-line-icons.css">
+</head>
+<body>
+
+    <header>
+        <nav>
+            <input id="header-toggle" type="checkbox">
+            <label class="header-button" for="header-toggle"></label>
+            <ul>
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="presentation.html">Présentation</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li class="header-blog">
+                    <a href="blog.html">Blog</a>
+                    <ul>
+                        <li><a href="articles/article1.html">Cuisine et là</a></li>
+                        <li><a href="articles/article2.html">Y quéa</a></li>
+                        <li><a href="articles/article3.html">Car fours</a></li>
+                    </ul>
+                </li>
+                <li><a href="subscribe.html">Abonnez-vous</a></li>
+                <li class="active">Se connecter</li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="wrapper">
+            <h1>Formulaire de connexion</h1>  
+            <form action="treatment/login.php" method="POST">
+                <div>
+                    <label for="email">Email</label>
+                    <input id="email" name="email" type="text" required autofocus>
+                </div>
+                <div>
+                    <label for="password">Mot de passe</label>
+                    <input id="password" name="password" type="password" required>
+                </div>
+                <label><input type="checkbox" value="remember-me"> Se souvenir de moi</label>
+                <button type="submit">
+                    <p>Connexion</p>
+                    <i class="icon-arrow-right"></i>
+                </button>
+            </form>
+        </div>
+    </main>
+
+    <footer>
+        <ul>
+            <li class="heading">Nos derniers articles</li>
+            <li><a href="articles/article1.html">Cuisine et là</a></li>
+            <li><a href="articles/article2.html">Y quéa</a></li>
+            <li><a href="articles/article3.html">Car fours</a></li>
+        </ul>
+        <a href="contact.html">Nous contacter</a>
+        <p>© Cavalcante Noa</p>
+        <p>IUTLyon1 Bourg-en-Bresse 2022-2023</p>
+    </footer>
+
+</body>
+</html>

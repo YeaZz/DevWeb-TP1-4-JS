@@ -1,0 +1,136 @@
+header {
+    top: 0;
+    position: sticky;
+    min-height: 53px;
+}
+
+nav {
+    background-color: #222;
+    box-shadow: 0px 0px 8px rgba(0,0,0,.6);
+    padding: 0 25px;
+}
+
+nav a {
+    color: #aaa;
+    text-decoration: none;
+}
+
+nav ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    list-style-type: none;
+}
+
+nav > ul > * {
+    padding: 1em;
+}
+
+nav ul li a {
+    transition: color .5s;
+}
+
+nav ul li a:hover {
+    color: white;
+}
+
+.header-blog ul {
+    display: block;
+    position: absolute;
+    background-color: #222;
+    padding: 1em;
+    padding-top: 0;
+    transform: translate(-35%, 1em);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity .2s ease;
+}
+
+.header-blog:hover ul {
+    opacity: 1;
+    pointer-events: all;
+}
+
+.header-blog ul li {
+    margin-top: 1em;
+}
+
+.header-button {
+    display: none;
+    cursor: pointer;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#header-toggle {
+    display: none;
+}
+
+.header-button,
+.header-button::before,
+.header-button::after {
+    background-color: white;
+    position: absolute;
+    height: 3px;
+    width: 30px;
+    transition: transform 400ms cubic-bezier(0.23, 1, 0.32, 1);
+    border-radius: 2px;
+}
+
+.header-button::before {
+    content: '';
+    margin-top: -10px;
+}
+
+.header-button::after {
+    content: '';
+    margin-top: 10px;
+}
+
+#header-toggle:checked ~ .header-button::before {
+    margin-top: 0px;
+    transform: rotate(405deg);
+}
+
+#header-toggle:checked ~ .header-button {
+    background: rgba(255, 255, 255, 0);
+}
+
+#header-toggle:checked ~ .header-button::after {
+    margin-top: 0;
+    transform: rotate(-405deg);
+}
+
+@media screen and (max-width: 760px) {
+    nav {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    nav ul {
+        flex-direction: column;
+        margin-left: 2em;
+    }
+    
+    nav ul li:not(.active) {
+        display: none;
+    }
+    
+    .header-blog ul {
+        all: revert;
+    }
+
+    .header-blog ul li:not(.active) {
+        text-shadow: none;
+    }
+    
+    .header-button {
+        display: flex;
+    }
+
+    #header-toggle:checked ~ ul li {
+        display: list-item;
+    }
+}
