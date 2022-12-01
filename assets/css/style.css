@@ -176,12 +176,20 @@ form div textarea {
 }
 
 #message {
-    visibility: hidden;
+    display: none;
 }
 
-form div input[type="color"] {
+form input[type="color"] {
     background-color: white;
     height: 4em;
+    border-radius: 3px;
+    border-color: rgb(118, 118, 118);
+}
+
+form input[type="file"] {
+    border: 1px solid;
+    border-color: rgb(118, 118, 118);
+    border-radius: 3px;
 }
 
 form button {
