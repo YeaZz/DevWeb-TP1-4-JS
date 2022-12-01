@@ -1,13 +1,13 @@
 let message = document.getElementById("message")
 let email = document.getElementById("email")
 
-const regex = new RegExp(/[a-zA-Z0-9._%-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{1,6}/, 'g')
+const regex = new RegExp(/[a-zA-Z0-9._%-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{1,6}/)
 
-email.addEventListener("change", event => {
+email.addEventListener("keyup", event => {
     if(regex.test(email.value))
-        message.style.visibility = "visible"
+        message.style.display = "block"
     else
-        message.style.visibility = "hidden";
+        message.style.display = "none";
 })
 
 let submitButton = document.getElementById("submitButton")
