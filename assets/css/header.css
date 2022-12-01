@@ -52,7 +52,7 @@ nav ul li a:hover {
 }
 
 .header-blog ul li {
-    margin-top: 1em;
+    margin-top: 0.5em;
 }
 
 .header-button {
@@ -115,11 +115,14 @@ nav ul li a:hover {
     }
     
     nav ul li:not(.active) {
-        display: none;
+        overflow: hidden;
+        height: 0;
+        padding: 0;
     }
     
     .header-blog ul {
         all: revert;
+        list-style: none;
     }
 
     .header-blog ul li:not(.active) {
@@ -131,6 +134,7 @@ nav ul li a:hover {
     }
 
     #header-toggle:checked ~ ul li {
-        display: list-item;
+        height: 100%;
+        padding: 1em;
     }
 }
