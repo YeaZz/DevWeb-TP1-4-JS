@@ -1,16 +1,16 @@
 let inputs = document.getElementsByClassName("form")
 let errors = document.getElementsByClassName("error")
 
-const postalRegex = new RegExp(/[0-9]{5}/);
+const postalRegex = new RegExp(/[0-9]{5}/)
 const emailRegex = new RegExp(/[a-zA-Z0-9._%-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{1,6}/)
 
 for (let i = 0; i < inputs.length; i++) {
-    if (inputs[i].value == "") {
-        errors[i].innerHTML = "* Champ obligatoire"
-    }
-    inputs[i].addEventListener("keyup", event => {
-        let input = inputs[i]
-        let msg = "";
+    let input = inputs[i]
+    let error = errors[i]
+    if (input.value == "")
+        error.innerHTML = "* Champ obligatoire"
+    input.addEventListener("keyup", event => {
+        let msg = ""
         if (input.value == "") {
             msg = "* Champ obligatoire"
         } else if (input.id == "email") {
@@ -20,7 +20,7 @@ for (let i = 0; i < inputs.length; i++) {
             if (!postalRegex.test(input.value))
                 msg = "* Format incorrect"
         }
-        errors[i].innerHTML = msg;
+        error.innerHTML = msg
     })
 }
 
