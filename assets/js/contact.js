@@ -11,7 +11,7 @@ email.addEventListener("keyup", event => {
 })
 
 let submitButton = document.getElementById("submitButton")
-let inputs = document.getElementsByClassName("form")
+let inputs = document.getElementsByClassName("input")
 
 submitButton.disabled = true;
 
